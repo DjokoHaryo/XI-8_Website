@@ -1,0 +1,24 @@
+.site-navigation {
+    height: 50px;
+}
+
+.container {
+    background-color: aqua;
+    width: 400px;
+    height: 500px;
+}
+
+.wrapper {
+    width: 100%;
+    height: 250px;
+    background-color: #222;
+    color: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.display-flex {
+    display: flex;
+}
