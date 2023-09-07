@@ -12,13 +12,21 @@
     text-decoration: none;
     border: none;
     outline: none;
+}
+
+html{
     scroll-behavior: smooth;
 }
 
-.navbar {
+body {
+    min-height: 5000px;
     background-color: #000;
+}
+
+.navbar {
+    background-color: #010101;
     width: auto;
-    height: 41px;
+    height: 38px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,14 +38,33 @@
     z-index: 9999;
 }
 
-.navbar h1 {
+.navbar-logo {
     color: #865DFF ;
+    font-style: italic;
+    font-size: 40px;
 }
 
 .navbar-nav a {
     color: #fff;
     display: inline-block;
     margin: 12px;
+}
+
+.garis:hover {
+    color: var(--huruf);
+}
+
+.garis::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.1rem;
+    border-bottom: 0.1rem solid var(--huruf);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.garis:hover::after {
+    transform: scaleX(0.9);
 }
 
 .navbar-ngl {
@@ -50,10 +77,88 @@
     height: 30px;
     font-weight: bold;
     border-radius: 20px;
+    border-bottom: none;
 }
 
-.home-bg {
-    width: 100px;
-    height: 821px;
-    flex-shrink: 0;
+.navbar-ngl:hover {
+    color: #451165;
+    background-color: #fff;
+}
+
+.navbar-ngl::after {
+    transition: 0.4s linear;
+}
+
+/* ISI DARI HOME */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(./homebg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* about sec */
+
+
+.about {
+    background-color: #000;
+    display: flex;
+    min-height: 550px;
+    align-items: center;
+    padding: 0;
+
+
+}
+
+.about .about-bg {
+    margin: auto;
+    width: auto;
+    padding-top: 0;
+}
+
+.about .about-bg p {
+    color: var(--white);
+    text-align: center;
+    font-size: 24px;
+}
+
+.about .about-bg h1 {
+    color: var(--huruf);
+    text-align: center;
+    font-size: 60px;
+    line-height: 1;
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    padding: 70px 0;
+    color: white;
+}
+
+.banner::before {
+    content: "";
+    background-image: url('./banner.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.banner h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    line-height: 0.7;
+}
+
+.banner p {
+    font-size: 18px;
+    line-height: 2;
 }
