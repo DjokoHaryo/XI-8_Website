@@ -12,13 +12,16 @@
     text-decoration: none;
     border: none;
     outline: none;
+}
+
+html{
     scroll-behavior: smooth;
 }
 
 .navbar {
-    background-color: #000;
+    background-color: #010101;
     width: auto;
-    height: 41px;
+    height: 38px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,16 +31,36 @@
     left: 0;
     right: 0;
     z-index: 9999;
+    border-bottom: #865DFF;
 }
 
-.navbar h1 {
+.navbar-logo {
     color: #865DFF ;
+    font-style: italic;
+    font-size: 40px;
 }
 
 .navbar-nav a {
     color: #fff;
     display: inline-block;
     margin: 12px;
+}
+
+.garis:hover {
+    color: var(--huruf);
+}
+
+.garis::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.1rem;
+    border-bottom: 0.1rem solid var(--huruf);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.garis:hover::after {
+    transform: scaleX(0.8);
 }
 
 .navbar-ngl {
@@ -50,10 +73,21 @@
     height: 30px;
     font-weight: bold;
     border-radius: 20px;
+    border-bottom: none;
 }
 
-.home-bg {
-    width: 100px;
-    height: 821px;
-    flex-shrink: 0;
+.navbar-ngl:hover {
+    color: #451165;
+    background-color: #fff;
+}
+
+.navbar-ngl::after {
+    transition: 0.4s linear;
+}
+
+.home {
+    background-image: url('../gambar/Screenshot(696).png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
