@@ -18,6 +18,11 @@ html{
     scroll-behavior: smooth;
 }
 
+body {
+    min-height: 5000px;
+    background-color: #000;
+}
+
 .navbar {
     background-color: #010101;
     width: auto;
@@ -85,9 +90,61 @@ html{
     transition: 0.4s linear;
 }
 
-.home {
-    background-image: url('../gambar/Screenshot(696).png');
+/* ISI DARI HOME */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    /* background-image: url(./gambar/homebg.png); */
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    position: relative;
+}
+
+.hero .content h1  {
+    font-family: 'Luckiest Guy';
+    font-size: 56px;
+    color: var(--white);
+    padding-left: 70px;
+    letter-spacing: 3.5px;
+}
+
+.hero .content p {
+    color: var(--white);
+    padding-left: 70px;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 20px;
+}
+
+.hero .XIpalinhteknik {
+    font-family: 'Love Ya Like A Sister', cursive;
+    letter-spacing: normal;
+}
+
+.hero .content .cta1 {
+    margin-left: 70px;
+    border: 2px solid var(--janda ); /* Garis pinggir kotak */
+    padding: 5px;        /* Ruang dalam kotak dari pinggirnya */
+    background-color: transparent; /* Warna latar belakang kotak */
+    border-radius: 10px;
+}
+
+.hero .content .cta {
+    margin: 10px;
+    padding: 8px;        /* Ruang dalam kotak dari pinggirnya */
+    background-color: var(--white); /* Warna latar belakang kotak */
+    border-radius: 10px;
+}
+
+.hero .content .cta1:hover {
+    color: var(--white);
+    border: 2px solid var(--huruf);
+    background-color: var(--janda);
+}
+
+.hero .content .cta:hover {
+    background-color: var(--janda);
+    color: var(--white);
 }
