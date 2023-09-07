@@ -96,7 +96,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    /* background-image: url(./gambar/homebg.png); */
+    background-image: url(./gambar/homebg.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -147,4 +147,52 @@ body {
 .hero .content .cta:hover {
     background-color: var(--janda);
     color: var(--white);
+}
+
+/* clan chief grreting */
+
+.clan {
+    padding: 8rem 7% 1.4rem;
+}
+
+.clan .row {
+    display: flex;
+}
+
+.clan .row .imgclan {
+    flex: 1 1 45rem;
+}
+
+.clan .content {
+    color: var(--white);
+}
+
+.clan .row .imgclan img {
+    width: 50%;
+    margin-left: 15rem;
+    border-radius: 50px;
+}
+
+.clan .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+    /* margin-top: 5rem; */
+    justify-content: center;
+}
+
+.clan .row .content h3 {
+    font-size: 36px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-family: 'Luckiest Guy';
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.clan .row .content p {
+    margin-bottom: 0.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    font-family: 'Inter', sans-serif;
 }
