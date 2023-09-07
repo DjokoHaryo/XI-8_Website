@@ -99,17 +99,14 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 /* about sec */
-
-
 .about {
     background-color: #000;
     display: flex;
-    min-height: 550px;
+    min-height: 650px;
     align-items: center;
-    padding: 0;
-
-
+    padding: 20px;
 }
 
 .about .about-bg {
@@ -128,13 +125,35 @@ body {
     color: var(--huruf);
     text-align: center;
     font-size: 60px;
-    line-height: 1;
+    line-height: 0.2;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.about .about-bg .cta {
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--white);
+    color: var(--janda);
+    border-radius: 24px;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.3) inset;
+    margin: 0 200px;
+}
+
+.about .about-bg .cta:hover {
+    align-items: center;
+    background-color: var(--janda);
+    color: var(--white);
 }
 
 .banner {
     position: relative;
     text-align: center;
-    padding: 70px 0;
+    padding: 120px 0;
     color: white;
 }
 
@@ -153,7 +172,7 @@ body {
 }
 
 .banner h1 {
-    font-size: 36px;
+    font-size: 38px;
     margin-bottom: 10px;
     line-height: 0.7;
 }
@@ -161,4 +180,73 @@ body {
 .banner p {
     font-size: 18px;
     line-height: 2;
+}
+
+
+/* developer */
+.developer {
+    display: flex;
+}
+
+.developer .heading {
+    font-size: 22px;
+    font-weight: 100;
+    color: var(--white);
+    margin-left: 60px;
+    margin-top: 100px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+    line-height: 1;
+    border-bottom: 0.1rem solid var(--white);
+}
+
+.developer h2 {
+    color: #FFF;
+    margin-left: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 66px;
+    line-height: 1;
+}
+
+.developer p {
+    margin-left: 60px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.developer .dev-img {
+    width: 50%;
+    margin-left: 12rem;
+    margin-right: 45px;
+}
+
+.developer .go-to {
+    display: flex;
+}
+
+.developer .go-to .cta {
+    margin-top: 10px;
+    margin-left: 60px;
+    font-size: 22px;
+    font-weight: 700;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--white);
+    color: var(--janda);
+    border-radius: 24px;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.3) inset;
+}
+
+.developer .go-to .cta:hover {
+    align-items: center;
+    background-color: var(--janda);
+    color: var(--white);
 }
