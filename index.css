@@ -186,14 +186,14 @@ body {
 /* developer */
 .developer {
     display: flex;
+    color: var(--white);
 }
 
 .developer .heading {
     font-size: 22px;
     font-weight: 100;
-    color: var(--white);
     margin-left: 60px;
-    margin-top: 100px;
+    margin-top: 160px;
     margin-right: 20px;
     padding-bottom: 10px;
     line-height: 1;
@@ -201,7 +201,6 @@ body {
 }
 
 .developer h2 {
-    color: #FFF;
     margin-left: 60px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -214,7 +213,6 @@ body {
 
 .developer p {
     margin-left: 60px;
-    color: #FFF;
     font-family: Inter;
     font-size: 22px;
     font-style: normal;
@@ -222,10 +220,19 @@ body {
     line-height: normal;
 }
 
-.developer .dev-img {
-    width: 50%;
-    margin-left: 12rem;
+.developer .dev-img1 img{
+    margin-top: 30%;
+    border-radius: 20px;
+    width: 70%;
     margin-right: 45px;
+    margin-left: 100px;
+}
+
+.developer .dev-img2 img{
+    margin-top: 50%;
+    margin-left: 20px;
+    border-radius: 20px;
+    width: 70%;
 }
 
 .developer .go-to {
@@ -249,4 +256,31 @@ body {
     align-items: center;
     background-color: var(--janda);
     color: var(--white);
+}
+
+.our-team {
+    color: var(--white);
+    margin-left: 60px;
+}
+
+.our-team h1 {
+    margin-top: 78px;
+    font-weight: 100;
+    margin-bottom: 9px;
+}
+
+.our-team h2 {
+    margin-bottom: 59px;
+    margin-right: 20px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 66px;
+    line-height: 1;
+}
+
+.our-team .img-team img{
+    margin: 0px 25px 214px 25px;
+    width: 353px;
+    height: 353px;
+    border-radius: 42px;
 }
