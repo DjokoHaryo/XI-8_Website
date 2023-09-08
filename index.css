@@ -219,31 +219,46 @@ body {
     border-bottom: 0.1rem solid var(--white);
 }
 
-.ourtaker .taker-img {
+.taker-img {
+    display: flex; /* Menggunakan flexbox */
+    justify-content: space-around; /* Menyebarkan elemen secara merata */
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+    text-align: center; /* Untuk teks di tengah */
     position: relative;
+}
+
+.ketua,
+.sekretaris,
+.bendahara {
+    margin: 0 20px; /* Memberi jarak kiri dan kanan antar elemen */
+}
+
+.ketua img,
+.sekretaris img,
+.bendahara img {
     margin-top: 50px;
-}
-
-.ourtaker .taker-img img {
-    position: absolute;
-    filter: brightness(0.5);
-    width: 25%;
-    height: 500px;
     border-radius: 40px;
+    width: 354px; /* Ubah sesuai dengan ukuran yang Anda inginkan */
+    height: 500px; /* Ubah sesuai dengan ukuran yang Anda inginkan */
+    position: relative;
 }
 
-.ourtaker .taker-img h4 {
+.ketua h4,
+.sekretaris h4,
+.bendahara h4 {
     color: var(--white);
     position: absolute;
-    top:20rem;
-    left: 10px;
+    padding: 22px;
+    bottom: 25%;
 }
 
-.ourtaker .taker-img p {
+.ketua p,
+.sekretaris p,
+.bendahara p {
     color: var(--white);
     position: absolute;
+    bottom: 12%; /* Atur jarak dari bawah sesuai preferensi Anda */
     width: 20%;
-    top: 21rem;
-    left:10px;
+    text-align: left;
+    margin-left: 22px;
 }
-
