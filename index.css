@@ -26,7 +26,7 @@ body {
 .navbar {
     background-color: #010101;
     width: auto;
-    height: 38px;
+    height: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,7 +43,7 @@ body {
     color: var(--white) ;
     font-style: italic;
     font-family: 'Love Ya Like A Sister', cursive;
-    font-size: 40px;
+    font-size: 35px;
 }
 
 .navbar-nav a {
@@ -97,7 +97,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    /* background-image: url(./gambar/homebg.png); */
+    background-image: url(./gambar/homebg.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -218,3 +218,32 @@ body {
     padding-bottom: 10px;
     border-bottom: 0.1rem solid var(--white);
 }
+
+.ourtaker .taker-img {
+    position: relative;
+    margin-top: 50px;
+}
+
+.ourtaker .taker-img img {
+    position: absolute;
+    filter: brightness(0.5);
+    width: 25%;
+    height: 500px;
+    border-radius: 40px;
+}
+
+.ourtaker .taker-img h4 {
+    color: var(--white);
+    position: absolute;
+    top:20rem;
+    left: 10px;
+}
+
+.ourtaker .taker-img p {
+    color: var(--white);
+    position: absolute;
+    width: 20%;
+    top: 21rem;
+    left:10px;
+}
+
