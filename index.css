@@ -12,13 +12,21 @@
     text-decoration: none;
     border: none;
     outline: none;
+}
+
+html{
     scroll-behavior: smooth;
 }
 
-.navbar {
+body {
+    min-height: 500px;
     background-color: #000;
+}
+
+.navbar {
+    background-color: #010101;
     width: auto;
-    height: 41px;
+    height: 38px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,14 +38,33 @@
     z-index: 9999;
 }
 
-.navbar h1 {
+.navbar-logo {
     color: #865DFF ;
+    font-style: italic;
+    font-size: 40px;
 }
 
 .navbar-nav a {
     color: #fff;
     display: inline-block;
     margin: 12px;
+}
+
+.garis:hover {
+    color: var(--huruf);
+}
+
+.garis::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.1rem;
+    border-bottom: 0.1rem solid var(--huruf);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.garis:hover::after {
+    transform: scaleX(0.9);
 }
 
 .navbar-ngl {
@@ -50,10 +77,324 @@
     height: 30px;
     font-weight: bold;
     border-radius: 20px;
+    border-bottom: none;
 }
 
-.home-bg {
-    width: 100px;
-    height: 821px;
-    flex-shrink: 0;
+.navbar-ngl:hover {
+    color: #451165;
+    background-color: #fff;
+}
+
+.navbar-ngl::after {
+    transition: 0.4s linear;
+}
+
+/* ISI DARI HOME */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(./homebg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* about sec */
+.about {
+    background-color: #000;
+    display: flex;
+    min-height: 650px;
+    align-items: center;
+    padding: 20px;
+}
+
+.about .about-bg {
+    margin: auto;
+    width: auto;
+    padding-top: 0;
+}
+
+.about .about-bg p {
+    color: var(--white);
+    text-align: center;
+    font-size: 24px;
+}
+
+.about .about-bg h1 {
+    color: var(--huruf);
+    text-align: center;
+    font-size: 60px;
+    line-height: 0.2;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.about .about-bg .cta {
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--white);
+    color: var(--janda);
+    border-radius: 24px;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.3) inset;
+    margin: 0 200px;
+}
+
+.about .about-bg .cta:hover {
+    align-items: center;
+    background-color: var(--janda);
+    color: var(--white);
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    padding: 120px 0;
+    color: white;
+}
+
+.banner::before {
+    content: "";
+    background-image: url('./banner.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.banner h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    line-height: 0.7;
+}
+
+.banner p {
+    font-size: 18px;
+    line-height: 2;
+}
+
+
+/* developer */
+.developer {
+    display: flex;
+    color: var(--white);
+}
+
+.developer .heading {
+    font-size: 22px;
+    font-weight: 100;
+    margin-left: 60px;
+    margin-top: 160px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+    line-height: 1;
+    border-bottom: 0.1rem solid var(--white);
+}
+
+.developer h2 {
+    margin-left: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 66px;
+    line-height: 1;
+}
+
+.developer p {
+    margin-left: 60px;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.developer .dev-img1 img{
+    margin-top: 30%;
+    border-radius: 20px;
+    width: 70%;
+    margin-right: 45px;
+    margin-left: 100px;
+}
+
+.developer .dev-img2 img{
+    margin-top: 50%;
+    margin-left: 20px;
+    border-radius: 20px;
+    width: 70%;
+}
+
+.developer .go-to {
+    display: flex;
+}
+
+.developer .go-to .cta {
+    margin-top: 10px;
+    margin-left: 60px;
+    font-size: 22px;
+    font-weight: 700;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--white);
+    color: var(--janda);
+    border-radius: 24px;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.3) inset;
+}
+
+.developer .go-to .cta:hover {
+    align-items: center;
+    background-color: var(--janda);
+    color: var(--white);
+}
+
+.our-team {
+    color: var(--white);
+   padding: 8rem 7% 1.4rem;
+}
+
+.our-team h1 {
+    margin-top: 70px;
+    font-weight: 100;
+    margin-bottom: 9px;
+}
+
+.our-team h2 {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 66px;
+    line-height: 1;
+}
+
+
+/* gambar ourteam */
+.img-team {
+    display: flex;/* Menggunakan flexbox */
+    justify-content: space-around; /* Menyebarkan elemen secara merata */
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+    text-align: center; /* Untuk teks di tengah */
+    position: relative;
+}
+
+.founder,
+.Co-founder,
+.TI {
+    margin: 0 20px; /* Memberi jarak kiri dan kanan antar elemen */
+}
+
+.founder img,
+.Co-founder img,
+.TI img {
+    border-radius: 40px;
+    width: 353px; /* Ubah sesuai dengan ukuran yang Anda inginkan */
+    height: 353px; /* Ubah sesuai dengan ukuran yang Anda inginkan */
+    position: relative;
+}
+
+.founder h1,
+.Co-founder h1,
+.TI h1 {
+    text-align: left;
+    width: 300px;
+    color: var(--white);
+    position: absolute;
+    padding: 22px;
+    top: 50%;
+}
+
+.founder p,
+.Co-founder p,
+.TI p {
+    color: var(--white);
+    position: absolute;
+    bottom: 8%; /* Atur jarak dari bawah sesuai preferensi Anda */
+    width: 20%;
+    text-align: left;
+    margin-left: 22px;
+}
+
+/* footer */
+footer {
+    background-color: #0e0e0e;
+    text-align: center;
+    padding: 0 0 3rem;
+    margin-top: 3rem;
+    display: flex;
+    height: 110px;
+}
+
+footer .lokasinya {
+    color: var(--white);
+    text-align: left;
+    margin: 10px auto;
+}
+
+footer .loc-logo  {
+    display: flex;
+}
+
+footer .loc-logo a {
+    margin-right: 5px;
+}
+
+footer .lokasinya .loc-logo h3 {
+    border-bottom: 2px solid var(--white);
+    margin-bottom: 10px;
+}
+
+footer .lokasinya p {
+    max-width: 323px;
+}
+
+
+footer .writenya {
+    margin: 5px auto;
+}
+
+footer .socials {
+    padding: 1rem 0; 
+}
+
+footer .socials a {
+    color: #fff;
+    margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+    color: var(--huruf)
+}
+
+footer .links {
+    margin-bottom: 1.4rem
+}
+
+footer .links a {
+    color: #fff;
+    padding: 0.7rem 1rem;
+}
+
+footer .credit {
+    font-size: 0.8rem;
+}
+
+footer .credit p {
+    color: var(--white);
+}
+
+footer .credit a {
+    color: var(--white);
+    font-weight: 700;
 }
