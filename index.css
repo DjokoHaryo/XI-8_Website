@@ -1,8 +1,9 @@
-:root{
+:root {
     --primary: #000;
     --huruf: #865DFF;
     --janda: #451165;
     --white: #fff;
+    --tambahan: #081b29;
 }
 
 * {
@@ -20,17 +21,17 @@ html{
 
 body {
     /* min-height: 5000px; */
-    background-color: #000;
+    background-color: var(--primary);
 }
 
 .navbar {
-    background-color: #01010100;
+    background-color: var(--primary);
     width: auto;
-    height: 30px;
+    height: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.4rem 5%;
+    padding: 1rem 5%;
     position: fixed;
     top: 0;
     left: 0;
@@ -40,10 +41,9 @@ body {
 }
 
 .navbar-logo {
-    color: var(--white) ;
-    font-style: italic;
-    font-family: 'Love Ya Like A Sister', cursive;
-    font-size: 35px;
+    color: var(--huruf) ;
+    width: 15%;
+    /* background-color: aqua; */
 }
 
 .navbar-nav a {
@@ -52,11 +52,17 @@ body {
     margin: 12px;
 }
 
-.garis:hover {
+.garis:hover ,
+.garis-active:hover {
     color: var(--huruf);
 }
 
-.garis::after {
+.navbar-nav a.garis-active {
+    color: var(--huruf);
+}
+
+.garis::after ,
+.garis-active::after {
     content: '';
     display: block;
     padding-bottom: 0.1rem;
@@ -65,7 +71,8 @@ body {
     transition: 0.2s linear;
 }
 
-.garis:hover::after {
+.garis:hover::after ,
+.garis-active:hover::after {
     transform: scaleX(0.8);
 }
 
@@ -97,7 +104,8 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background-image: url(./gambar/homebg.png);
+    background-color: #081b29;
+    /* background-image: url(./gambar/homebg.png); */
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -130,6 +138,7 @@ body {
     padding: 5px 20px;        /* Ruang dalam kotak dari pinggirnya */
     background-color: transparent; /* Warna latar belakang kotak */
     border-radius: 10px;
+    font-weight: bold;
 }
 
 .hero .content .cta {
@@ -263,7 +272,6 @@ body {
     margin-left: 22px;
 }
 
-
 /* footer */
 footer {
     background-color: #0e0e0e;
@@ -286,6 +294,7 @@ footer .loc-logo  {
 
 footer .loc-logo a {
     margin-right: 5px;
+    color: var(--huruf);
 }
 
 footer .lokasinya .loc-logo h3 {
@@ -297,6 +306,14 @@ footer .lokasinya p {
     max-width: 323px;
 }
 
+footer .logo-footer {
+    width: 20%;
+}
+
+footer .logo-footer img {
+    margin: 50px auto 0;
+    width: 100%;
+}
 
 footer .writenya {
     margin: 5px auto;
@@ -338,3 +355,18 @@ footer .credit a {
     font-weight: 700;
 }
 
+
+/* Media Queries */
+/* laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 100%
+    }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%
+    }
+}
