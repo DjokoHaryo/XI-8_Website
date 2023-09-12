@@ -25,7 +25,7 @@ body {
 }
 
 .navbar {
-    background-color: var(--primary);
+    background-color: #0f0316;
     width: auto;
     height: 20px;
     display: flex;
@@ -43,7 +43,6 @@ body {
 .navbar-logo {
     color: var(--huruf) ;
     width: 15%;
-    /* background-color: aqua; */
 }
 
 .navbar-nav a {
@@ -53,7 +52,8 @@ body {
 }
 
 .garis:hover ,
-.garis-active:hover {
+.garis-active:hover ,
+.garis-non-active:hover {
     color: var(--huruf);
 }
 
@@ -62,7 +62,8 @@ body {
 }
 
 .garis::after ,
-.garis-active::after {
+.garis-active::after , 
+.garis-non-active::after {
     content: '';
     display: block;
     padding-bottom: 0.1rem;
@@ -72,7 +73,8 @@ body {
 }
 
 .garis:hover::after ,
-.garis-active:hover::after {
+.garis-active:hover::after , 
+.garis-non-active:hover::after {
     transform: scaleX(0.8);
 }
 
@@ -98,9 +100,63 @@ body {
     transition: 0.4s linear;
 }
 
-/* ISI DARI HOME */
+#hamburger-menu {
+    display: none;
+}
 
-.hero {
+
+/* ISI DARI HOME */
+    a {
+    color: #fff;
+  }
+
+  .social {
+    position: fixed;
+    top: 60px;
+    z-index: 90;
+  }
+  .social ul {
+    padding: 0px;
+    transform: translate(95vw ,0);
+  }
+  .social ul li {
+    display: block;
+    margin: 5px;
+    background: rgba(0, 0, 0, 0.36);
+    width: 300px;
+    text-align: left;
+    padding: 10px;
+    border-radius: 30px 0 0 30px;
+    transition: all 1s;
+  } 
+  .social ul li:hover {
+    transform: translate(-110px, 0);
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .social ul li:hover a {
+    color: #000;
+  }
+  .social ul li:hover i {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.36);
+    transform: rotate(-360deg);
+    transition: all 1s;
+  }
+
+  .social ul li i {
+    margin-right: 10px;
+    color: #000;
+    background: #fff;
+    padding: 8px 10px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    background: #ffffff;
+    transform: rotate(0deg);
+  }
+
+.hero { 
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -139,9 +195,11 @@ body {
     background-color: transparent; /* Warna latar belakang kotak */
     border-radius: 10px;
     font-weight: bold;
+    color: var(--janda);
 }
 
 .hero .content .cta {
+    color: var(--janda);
     margin: 15px;
     padding: 7px;        /* Ruang dalam kotak dari pinggirnya */
     background-color: var(--white); /* Warna latar belakang kotak */
@@ -258,7 +316,7 @@ body {
     color: var(--white);
     position: absolute;
     padding: 22px;
-    bottom: 25%;
+    bottom: 27%;
 }
 
 .ketua p,
@@ -266,11 +324,253 @@ body {
 .bendahara p {
     color: var(--white);
     position: absolute;
-    bottom: 12%; /* Atur jarak dari bawah sesuai preferensi Anda */
+    bottom: 14%; /* Atur jarak dari bawah sesuai preferensi Anda */
     width: 20%;
     text-align: left;
     margin-left: 22px;
 }
+
+.sos-taker {
+    position: absolute;
+    bottom: 2%;
+    text-align: left;
+    margin: 0  22px;
+    width: 100%;
+    padding-bottom: 2%;
+}
+
+.sos-taker img {
+    width: 2%;
+    height: 5%;
+    border-radius: 0;
+    margin-right: 5px;
+}
+
+/* about sec */
+.about {
+    background-color: #000;
+    display: flex;
+    min-height: 650px;
+    align-items: center;
+    padding: 20px;
+}
+
+.about .about-bg {
+    margin: auto;
+    width: auto;
+    padding-top: 0;
+}
+
+.about .about-bg p {
+    color: var(--white);
+    text-align: center;
+    font-size: 24px;
+}
+
+.about .about-bg h1 {
+    color: var(--huruf);
+    text-align: center;
+    font-size: 60px;
+    line-height: 0.2;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.about .about-bg .cta {
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--white);
+    color: var(--janda);
+    border-radius: 24px;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.3) inset;
+    margin: 0 200px;
+}
+
+.about .about-bg .cta:hover {
+    align-items: center;
+    background-color: var(--janda);
+    color: var(--white);
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    padding: 120px 0;
+    color: white;
+}
+
+.banner::before {
+    content: "";
+    background-image: url('./banner.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.banner h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    line-height: 0.7;
+}
+
+.banner p {
+    font-size: 18px;
+    line-height: 2;
+}
+
+
+/* developer */
+.developer {
+    display: flex;
+    color: var(--white);
+}
+
+.developer .heading {
+    font-size: 22px;
+    font-weight: 100;
+    margin-left: 60px;
+    margin-top: 160px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+    line-height: 1;
+    border-bottom: 0.1rem solid var(--white);
+}
+
+.developer h2 {
+    margin-left: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 66px;
+    line-height: 1;
+}
+
+.developer p {
+    margin-left: 60px;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.developer .dev-img1 img{
+    margin-top: 30%;
+    border-radius: 20px;
+    width: 70%;
+    margin-right: 45px;
+    margin-left: 100px;
+}
+
+.developer .dev-img2 img{
+    margin-top: 50%;
+    margin-left: 20px;
+    border-radius: 20px;
+    width: 70%;
+}
+
+.developer .go-to {
+    display: flex;
+}
+
+.developer .go-to .cta {
+    margin-top: 10px;
+    margin-left: 60px;
+    font-size: 22px;
+    font-weight: 700;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--white);
+    color: var(--janda);
+    border-radius: 24px;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.3) inset;
+}
+
+.developer .go-to .cta:hover {
+    align-items: center;
+    background-color: var(--janda);
+    color: var(--white);
+}
+
+.our-team {
+    color: var(--white);
+   padding: 8rem 7% 1.4rem;
+}
+
+.our-team h1 {
+    margin-top: 70px;
+    font-weight: 100;
+    margin-bottom: 9px;
+}
+
+.our-team h2 {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 66px;
+    line-height: 1;
+}
+
+
+/* gambar ourteam */
+.img-team {
+    display: flex;/* Menggunakan flexbox */
+    justify-content: space-around; /* Menyebarkan elemen secara merata */
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+    text-align: center; /* Untuk teks di tengah */
+    position: relative;
+}
+
+.founder,
+.Co-founder,
+.TI {
+    margin: 0 20px; /* Memberi jarak kiri dan kanan antar elemen */
+}
+
+.founder img,
+.Co-founder img,
+.TI img {
+    border-radius: 40px;
+    width: 353px; /* Ubah sesuai dengan ukuran yang Anda inginkan */
+    height: 353px; /* Ubah sesuai dengan ukuran yang Anda inginkan */
+    position: relative;
+}
+
+.founder h1,
+.Co-founder h1,
+.TI h1 {
+    text-align: left;
+    width: 300px;
+    color: var(--white);
+    position: absolute;
+    padding: 22px;
+    top: 50%;
+}
+
+.founder p,
+.Co-founder p,
+.TI p {
+    color: var(--white);
+    position: absolute;
+    bottom: 8%; /* Atur jarak dari bawah sesuai preferensi Anda */
+    width: 20%;
+    text-align: left;
+    margin-left: 22px;
+}
+
 
 /* footer */
 footer {
@@ -316,7 +616,7 @@ footer .logo-footer img {
 }
 
 footer .writenya {
-    margin: 5px auto;
+    margin: 10px auto;
 }
 
 footer .socials {
@@ -369,4 +669,70 @@ footer .credit a {
     html {
         font-size: 62.5%
     }
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    
+    .navbar-logo {
+        color: var(--huruf) ;
+        width: 25%;
+    }
+
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: var(--primary);
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: var(--white);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+
+    .navbar-ngl {
+        background-color: var(--janda);
+    }
+    
+    .navbar-ngl:hover {
+        color: #451165;
+        background-color: #fff;
+    }
+    
+    .navbar-ngl::after {
+        transition: 0.4s linear;
+    }
+}
+
+/* mobile phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%
+    }
+
+    .navbar-logo {
+        color: var(--huruf) ;
+        width: 35%;
+    }
+
 }
