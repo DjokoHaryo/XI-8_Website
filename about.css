@@ -1,0 +1,285 @@
+:root {
+    --primary: #000;
+    --huruf: #865DFF;
+    --janda: #451165;
+    --white: #fff;
+    --tambahan: #081b29;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body { 
+    color: white;
+    background-color: black;
+    font-family: sans-serif;
+}
+.welcome {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.judul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.judul p {
+    width: 38rem;
+    margin: 5px auto;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.judul h4 {
+    color: var(--huruf);
+    line-height: 3.8rem;
+    font-size: 4rem;
+    margin: 0 auto;
+    width: 40rem;
+}
+
+.judul .cta {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    align-items: center;
+    margin: 1rem auto;
+    padding: 1.1rem 0;
+    width: 22rem;
+    background-color: var(--white);
+    color: var(--janda);
+    border-radius: 1.5rem;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.3) inset;
+}
+
+.judul .cta:hover {
+    align-items: center;
+    background-color: var(--janda);
+    color: var(--white);
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    padding: 6rem 0;
+    color: white;
+}
+
+.banner::before {
+    content: "";
+    background-image: url('gambar/banner.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.banner h1 {
+    margin: auto;
+    width: 30rem;
+    font-size: 2.3rem;
+    line-height: 0.9;
+}
+
+.banner p {
+    font-size: 1.1rem;
+    line-height: 2;
+}
+
+.developer {
+    display: flex;
+    color: var(--white);
+}
+
+.developer .heading {
+    color: var(--huruf);
+    font-size: 1.3rem;
+    font-weight: 100;
+    margin-left: 4rem;
+    margin-top: 10rem;
+    margin-right: 1rem;
+    padding-bottom: 0.8rem;
+    line-height: 1;
+    border-bottom: 0.1rem solid var(--white);
+}
+
+.developer h2 {
+    color: var(--huruf);
+    width: 24rem;
+    margin-left: 4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    margin-right: 1.5rem;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 3.7rem;
+}
+
+.developer h2 span {
+    color: var(--white)
+}
+
+.developer p {
+    margin-left: 4rem;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.dev-img{
+    display: flex;
+}
+
+.developer .dev-img .dev-img1{
+    margin-top: 4rem;
+    border-radius: 1.3rem;
+    height: 32rem;
+    width: 16rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.developer .dev-img .dev-img2{
+    margin-top: 11.6rem;
+    margin-right: 2rem;
+    border-radius: 1.3rem;
+    height: 24.3rem;
+    width: 12rem;
+}
+
+.developer .go-to {
+    text-align: center;
+    display: flex;
+}
+
+.developer .go-to .cta {
+    text-decoration: none;
+    margin-top: 1rem;
+    margin-left: 4rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    align-items: center;
+    padding: 1.2rem;
+    background-color: var(--white);
+    color: var(--janda);
+    border-radius: 1.3rem;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.3) inset;
+}
+
+.developer .go-to .cta:hover {
+    align-items: center;
+    background-color: var(--janda);
+    color: var(--white);
+}
+
+
+
+
+
+
+@media (max-width:992px) {
+    html {
+        font-size: 75%;
+    }
+    .judul {
+        margin: 0 auto;
+    }
+    .judul p {
+        padding: 0;
+        width: 38rem;
+    }
+    .banner {
+        padding: 6rem 0;
+    }
+    .banner h1 {
+        font-size: 2.2rem;
+    }
+    
+
+}
+
+@media (max-width:802px) {
+    html {
+        font-size: 67.5%;
+    }
+    .developer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .developer .heading,
+    .developer p {
+        margin-right: 3rem;
+    }
+
+    .developer .dev-img{
+        justify-content: center;
+        margin: auto;
+    }
+    .developer .dev-img .dev-img1{
+        margin-left: 3rem;
+        margin-top: 7rem;
+        height: 28rem;
+        width: 16rem;
+    }
+    .developer .dev-img .dev-img2{
+        margin-top: 14.8rem;
+        height: 20.3rem;
+        width: 11rem;
+    }
+
+    .developer .go-to .cta {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width:468px) {
+    html {
+        font-size: 62.5%;
+    }
+    .judul{
+        align-items: start;
+    }
+
+    .banner{
+        padding: 4rem 0;
+    }
+
+    .developer{
+        display: flex;
+        flex-direction: column;
+    }
+    .developer .heading {
+        margin-top: 4rem;
+    }
+
+    .developer .dev-img .dev-img1{
+        margin-top: 4rem;
+    }
+
+    .developer .dev-img .dev-img2{
+        margin-top: 11.7rem;
+    }
+
+    .developer .go-to .cta{
+        font-size: 1.5rem;
+    }
+}
