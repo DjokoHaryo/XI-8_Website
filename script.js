@@ -1,4 +1,3 @@
-
 // ==============navbar hide and show==============
 
 const barbtn = document.getElementById("bar-icon");
