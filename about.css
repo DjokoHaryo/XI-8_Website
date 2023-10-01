@@ -148,6 +148,12 @@ body {
     display: flex;
 }
 
+.dev-img img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 .developer .dev-img .dev-img1{
     margin-top: 4rem;
     border-radius: 1.3rem;
@@ -190,8 +196,70 @@ body {
     color: var(--white);
 }
 
+.our-team .heading {
+    color: var(--huruf);
+    font-size: 1.3rem;
+    font-weight: 100;
+    margin-left: 4rem;
+    margin-top: 10rem;
+    line-height: 1;
+    opacity: 0.7;
+}
+
+.our-team h2{
+    font-size: 2.4rem;
+    margin-left: 4rem;
+    margin-top: 0.5rem;
+}
+
+.boxes{
+    display: flex;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.boxes .box {
+    justify-content: space-around;
+    margin: 2rem 1rem;
+    position: relative;
+    background: url(gambar/Bj\ habibie.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 24rem;
+    height: 24rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 3rem;
+    padding: 2.2rem 2rem;
+}
+
+.boxes .box::after {
+    content:'';
+    display: block;
+    position: absolute;
+    width: 24rem;
+    height: 24rem;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0,0,2,1)4%, rgba(255,255,255, 0)100%);
+}
+
+.box h3{
+    font-size: 1.4rem;
+    z-index: 1;
+}
+
+.box p{
+    color: var(--huruf);
+    font-size: 1.2rem;
+    z-index: 1;
+    opacity: 0.6;
+}
 
 
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 
 
@@ -213,7 +281,6 @@ body {
         font-size: 2.2rem;
     }
     
-
 }
 
 @media (max-width:802px) {
@@ -225,7 +292,11 @@ body {
         flex-direction: column;
     }
 
-    .developer .heading,
+    .developer .heading{
+        margin-top: 4rem;
+        margin-right: 3rem;
+    }
+
     .developer p {
         margin-right: 3rem;
     }
@@ -236,12 +307,13 @@ body {
     }
     .developer .dev-img .dev-img1{
         margin-left: 3rem;
-        margin-top: 7rem;
+        margin-top: 4rem;
         height: 28rem;
         width: 16rem;
     }
+
     .developer .dev-img .dev-img2{
-        margin-top: 14.8rem;
+        margin-top: 11.7rem;
         height: 20.3rem;
         width: 11rem;
     }
@@ -263,23 +335,19 @@ body {
         padding: 4rem 0;
     }
 
-    .developer{
-        display: flex;
-        flex-direction: column;
-    }
-    .developer .heading {
-        margin-top: 4rem;
-    }
-
-    .developer .dev-img .dev-img1{
-        margin-top: 4rem;
-    }
-
-    .developer .dev-img .dev-img2{
-        margin-top: 11.7rem;
-    }
-
     .developer .go-to .cta{
         font-size: 1.5rem;
+    }
+    .boxes{
+        overflow-x: scroll;
+    }
+    .boxes::-webkit-scrollbar{
+        display: none;
+    }
+    .boxes .box{
+        padding: 7rem;
+    }
+    .boxes .box::after{
+        width: 20rem;
     }
 }
