@@ -6,8 +6,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body>
+
+
+
+    <nav>
+        <div class="nav-container">
+           <div class="header">
+            <a href="#">
+              <div class="navbar-logo">
+                <img src="gambar/logo-name4.png" alt="">
+              </div>
+            </a>
+              <div class="navbar">
+                 <ul id="menu">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li>
+                       <a href="#" class="droptoggle">Media social <span class="down-arrow">&#129171;</span></a>
+  
+                       <ul class="submenu">
+                          <li><a href="#">Instagram</a></li>
+                          <li><a href="#">Spotify</a></li>
+                       </ul>
+                    </li>
+                    <li><a href="#">profile</a></li>
+                    <li id="btn-ngl"><a href="#">ngl</a></li>
+                 </ul>
+              </div>
+  
+              <div class="ser-btn">
+                 <ul>
+                    <li id="bar-icon"><a href="#">&#9776;</a></li>
+                 </ul>
+              </div>
+           </div>
+        </div>
+      </nav>
+
+
+
+
+
+
     <!-- about section -->
     <section class="welcome" id="about">
         <div class="judul">
@@ -56,4 +99,30 @@
             </div>
         </div>
     </section>
+
+
+
+
+
+    <script>
+        const barbtn = document.getElementById("bar-icon");
+const dropdown = document.getElementById("menu");
+
+barbtn.addEventListener("click", ()=>{
+    dropdown.classList.toggle("show");
+})
+
+
+// submenu
+
+const droptog = document.querySelectorAll(".droptoggle");
+const submenu = document.getElementsByClassName("submenu");
+
+for(let x = 0; x < droptog.length; x++){
+    droptog[x].addEventListener("click", ()=>{
+        submenu[x].classList.toggle("submenushow");
+    })
+}
+
+    </script>
 </body>
