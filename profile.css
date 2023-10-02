@@ -1,0 +1,183 @@
+:root{
+    --primary: #000;
+    --huruf: #865DFF;
+    --janda: #451165;
+    --white: #fff;
+}
+
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+
+body {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.judul h1 {
+    font-weight: 700;
+    color: var(--huruf);
+    padding: 7rem 0 0 3rem;
+    font-size: 4rem;
+}
+
+.judul p {
+    font-size: 1.8rem;
+    padding: 0 0 10px 0;
+    margin: 0 3rem 0 3rem;
+    border-bottom: 0.13rem solid #fff;
+}
+
+.contain {
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: var(--white);
+}
+
+.pinggir {
+    padding-top: 18rem;
+}
+
+.tengah {
+    padding-top: 1.2rem;
+    background-color: #451165;
+    height: 1100vh;
+}
+.bottom {
+    position: absolute;
+    display: flex;
+    align-items: end;
+    overflow: hidden;
+    height: 1200vh;
+}
+
+.box {
+    margin: 4rem 0;
+    position: relative;
+    overflow: hidden;
+    background: url(gambar/Bj\ habibie.jpeg);
+    background-size: cover;
+    background-position: center;
+    width: 21rem;
+    height: 36rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 3rem;
+    padding: 2rem;
+}
+
+.box::after {
+    content:'';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(0,0,2,1)10%, rgba(255,255,255, 0)100%);
+}
+
+.text h4 {
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 100;
+    color: var(--white);
+}
+
+.text p {
+    position: relative;
+    z-index: 100;
+    color: white;
+    letter-spacing: 0.02rem;
+}
+
+
+.text {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;
+    overflow: hidden;
+}
+
+.box:hover .text {
+    z-index: 100;
+    width: 100%;
+    height: 24%;
+    left: 0;
+    bottom: 0;
+}
+
+.logo img {
+    margin: 0.5rem 0.3rem 0 0;
+    position: relative;
+    z-index: 100;
+    max-width: 30px;
+    left: 0;
+}
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+@media (max-width:992px) {
+    html {
+        font-size: 75%;
+    }
+    .box,
+    .kanan {
+        margin: 4rem 2rem;
+    }
+    .tengah {
+        height: 960vh;
+    }
+    .bottom {
+        height: 1600vh;
+    }
+    .pinggir,
+    .tengah{
+        padding-top: 0;
+    }
+    .kanan {
+        display: flex;
+        justify-content: space-around; 
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+
+@media (max-width:768px) {
+    html {
+        font-size: 67.5%;
+    }
+    .tengah {
+        height: 870vh;
+    }
+    .bottom {
+        height: 1440vh;
+    }
+}
+
+@media (max-width:468px) {
+    html {
+        font-size: 62.5%;
+    }
+    .judul h1{
+        font-size: 2.4rem;
+    }
+    .judul p{
+        font-size: 1.8rem;
+    }
+    .bottom {
+        height: 2050vh;
+    }
+}
