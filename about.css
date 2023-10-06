@@ -163,8 +163,7 @@ body {
     }
 }
 
-
-
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 .welcome {
     height: 100vh;
@@ -416,6 +415,88 @@ body {
 @media (max-width:992px) {
     html {
         font-size: 75%;
+    }
+    .navbar>ul {
+        position: absolute;
+        background-color: #152733;
+        left: 0;
+        right: 0;
+        top: 60px;
+        width: 90%;
+        display: inline-block;
+        margin: auto;
+        flex-direction: column;
+        border-top: 8px solid #0d6efd;
+    }
+    .navbar-logo  {
+        width: 20rem;
+    }
+    .header {
+        height: 60px;
+    }
+    .ser-btn #bar-icon {
+        display: block;
+    }
+    .ser-btn #bar-icon a {
+        color: white;
+        font-size: 27px;
+        padding: 1px 5px;
+    }
+    .navbar ul li {
+        border-top: 1px solid #e6e6e6;
+    }
+    .navbar ul li a {
+        padding: 15px 16px;
+    }
+    .navbar ul li>ul {
+        background-color: #2b5570;
+    }
+    .navbar ul li>ul li a {
+        font-size: 13px;
+        padding: 10px 25px;
+    }
+
+    .navbar ul ul li a .arrow-right {
+        font-size: 18px;
+        transform: rotate(90deg);
+    }
+
+    .navbar ul li a .down-arrow {
+        right: 10px;
+        top: 9px;
+        font-size: 35px;
+    }
+    .navbar ul li ul li>ul {
+        background-color: #0162CA;
+    }
+
+    #menu {
+        max-height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    #menu.show {
+        overflow-y: scroll;
+        visibility: visible;
+        opacity: 1;
+        max-height: 100vh;
+    }
+
+    .submenu {
+        display: none;
+    }
+    .submenushow {
+        display: block;
+    }
+    #btn-ngl {
+        position: static; /* Mengembalikan posisi tombol ke posisi normal dalam alur dokumen */
+        width: auto; 
+        padding: 5px 10px; /* Menyesuaikan padding agar sesuai dengan tampilan responsif */
+        border-radius: 0; /* Menghapus border-radius */
+    }
+    #btn-ngl:hover {
+        background-color: var(--huruf);
     }
     .judul {
         margin: 0 auto;
