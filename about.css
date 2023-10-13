@@ -1,9 +1,9 @@
 :root {
-    --primary: #000;
-    --huruf: #865DFF;
-    --janda: #451165;
-    --white: #fff;
-    --tambahan: #081b29;
+    --primary: #EBEBEB;
+    --biru: #808EAA;
+    --huruf: #153168;
+    --black: #141414;
+    --tambahan: #0c1524;
 }
 * {
     margin: 0;
@@ -12,16 +12,16 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body { 
-    color: white;
-    background-color: black;
+    color: var(--black);
+    background-color: var(--primary);
     font-family: sans-serif;
 }
 
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 .nav-container {
     width: 100%;
     height: 25px;
-    background: #865;
     display: flex;
     position: fixed;
     z-index: 9999;
@@ -31,7 +31,7 @@ body {
     width: 100%;
     height: 100%;
     padding: 1.4rem;
-    background: #152733;
+    background: var(--black);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -59,7 +59,7 @@ body {
 .navbar ul li a {
     position: relative;
     display: block;
-    color: white;
+    color: var(--primary);
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
@@ -70,10 +70,10 @@ body {
 }
 .navbar ul li a.active,
 .navbar ul>li>a:hover {
-    color: #0093FF;
+    color: var(--huruf);
 }
 #btn-ngl {
-    background-color: var(--janda);
+    background-color: var(--huruf);
     width: 60px;
     display: flex;
     justify-content: center;
@@ -85,8 +85,8 @@ body {
 }
 
 #btn-ngl:hover {
-    color: #451165;
-    background-color: #fff;
+    color: var(--huruf);
+    background-color: var(--primary);
 }
 .ser-btn ul {
     display: flex;
@@ -112,10 +112,10 @@ body {
 @media (min-width:992px) {
     .navbar ul li ul {
         position: absolute;
-        border-top: 3px solid #0093ff;
+        border-top: 3px solid var(--huruf);
         list-style: none;
         min-width: 250px;
-        background: #152733;
+        background: var(--tambahan);
         padding: 0;
         box-shadow: 0 3px 5px 0 rgb(0 0 0 / 20%);
         border-radius: 0;
@@ -135,17 +135,17 @@ body {
     }
     .navbar ul ul li a {
         display: block;
-        color: white;
+        color: var(--primary);
         font-weight: 700;
         font-size: 15px;
         padding: 8px 10px;
         line-height: 1.8rem;
-        border: 1px solid #ddd;
+        border: 1px solid var(--primary);
         transition: all 0.5s;
     }
     .navbar ul ul li a:hover {
-        color: white;
-        background-color: #0d6efd;
+        color: var(--huruf);
+        background-color: var(--black);
         border-color: transparent;
         padding-left: 25px;
     }
@@ -163,7 +163,11 @@ body {
     }
 }
 
+
+
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
 
 .welcome {
     height: 100vh;
@@ -171,16 +175,16 @@ body {
     justify-content: center;
     position: relative;
 }
+
 .judul {
     display: flex;
-    width: 100%;
-    height: 100%;
     flex-direction: column;
     justify-content: center;
     text-align: center;
 }
 
 .judul p {
+    color: var(--black);
     width: 38rem;
     margin: 5px auto;
     font-weight: 400;
@@ -205,16 +209,16 @@ body {
     margin: 1rem auto;
     padding: 1.1rem 0;
     width: 22rem;
-    background-color: var(--white);
-    color: var(--janda);
+    background-color: var(--black);
+    color: var(--primary);
     border-radius: 1.5rem;
     box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.3) inset;
 }
 
 .judul .cta:hover {
     align-items: center;
-    background-color: var(--janda);
-    color: var(--white);
+    background-color: var(--huruf);
+    color: var(--primary);
 }
 
 .banner {
@@ -223,12 +227,12 @@ body {
     position: relative;
     text-align: center;
     padding: 6rem 0;
-    color: white;
+    color: var(--primary);
 }
 
 .banner::before {
     content: "";
-    background-image: url('gambar/banner.jpeg');
+    background-image: url('gambar/banner.jpg');
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -236,7 +240,6 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.5;
     z-index: -1;
 }
 
@@ -254,11 +257,11 @@ body {
 
 .developer {
     display: flex;
-    color: var(--white);
+    color: var(--black);
 }
 
 .developer .heading {
-    color: var(--huruf);
+    color: var(--black);
     font-size: 1.3rem;
     font-weight: 100;
     margin-left: 4rem;
@@ -266,7 +269,7 @@ body {
     margin-right: 1rem;
     padding-bottom: 0.8rem;
     line-height: 1;
-    border-bottom: 0.1rem solid var(--white);
+    border-bottom: 0.1rem solid var(--black);
 }
 
 .developer h2 {
@@ -282,7 +285,7 @@ body {
 }
 
 .developer h2 span {
-    color: var(--white)
+    color: var(--black)
 }
 
 .developer p {
@@ -333,20 +336,20 @@ body {
     font-weight: 700;
     align-items: center;
     padding: 1.2rem;
-    background-color: var(--white);
-    color: var(--janda);
+    background-color: var(--black);
+    color: var(--primary);
     border-radius: 1.3rem;
     box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.3) inset;
 }
 
 .developer .go-to .cta:hover {
     align-items: center;
-    background-color: var(--janda);
-    color: var(--white);
+    background-color: var(--huruf);
+    color: var(--primary);
 }
 
 .our-team .heading {
-    color: var(--huruf);
+    color: var(--black);
     font-size: 1.3rem;
     font-weight: 100;
     margin-left: 4rem;
@@ -362,13 +365,14 @@ body {
 }
 
 .boxes{
+    justify-content: space-around;
     display: flex;
     margin-left: 2rem;
     margin-right: 2rem;
+    background-color: #153168;
 }
 
 .boxes .box {
-    justify-content: space-around;
     margin: 2rem 1rem;
     position: relative;
     background: url(gambar/Bj\ habibie.jpeg);
@@ -387,20 +391,24 @@ body {
     content:'';
     display: block;
     position: absolute;
-    width: 24rem;
+    width: 100%;
     height: 24rem;
     bottom: 0;
     left: 0;
     background: linear-gradient(0deg, rgba(0,0,2,1)4%, rgba(255,255,255, 0)100%);
+    border-radius: 3rem;
 }
 
 .box h3{
+    color: var(--primary);
     font-size: 1.4rem;
     z-index: 1;
+    width: 15rem;
+    background-color: #153168;
 }
 
 .box p{
-    color: var(--huruf);
+    color: var(--biru);
     font-size: 1.2rem;
     z-index: 1;
     opacity: 0.6;
@@ -418,7 +426,7 @@ body {
     }
     .navbar>ul {
         position: absolute;
-        background-color: #152733;
+        background-color: var(--black);
         left: 0;
         right: 0;
         top: 60px;
@@ -426,7 +434,7 @@ body {
         display: inline-block;
         margin: auto;
         flex-direction: column;
-        border-top: 8px solid #0d6efd;
+        border-top: 8px solid var(--huruf);
     }
     .navbar-logo  {
         width: 20rem;
@@ -438,18 +446,18 @@ body {
         display: block;
     }
     .ser-btn #bar-icon a {
-        color: white;
+        color: var(--primary);
         font-size: 27px;
         padding: 1px 5px;
     }
     .navbar ul li {
-        border-top: 1px solid #e6e6e6;
+        border-top: 1px solid var(--primary);
     }
     .navbar ul li a {
         padding: 15px 16px;
     }
     .navbar ul li>ul {
-        background-color: #2b5570;
+        background-color: var(--black);
     }
     .navbar ul li>ul li a {
         font-size: 13px;
@@ -467,7 +475,7 @@ body {
         font-size: 35px;
     }
     .navbar ul li ul li>ul {
-        background-color: #0162CA;
+        background-color: var(--huruf);
     }
 
     #menu {
@@ -558,6 +566,7 @@ body {
     html {
         font-size: 62.5%;
     }
+
     .judul{
         align-items: start;
     }
@@ -575,10 +584,8 @@ body {
     .boxes::-webkit-scrollbar{
         display: none;
     }
-    .boxes .box{
-        padding: 7rem;
+    .boxes .box {
+        transform: translateX(120px);
     }
-    .boxes .box::after{
-        width: 20rem;
-    }
+
 }
