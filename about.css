@@ -348,20 +348,21 @@ body {
     color: var(--primary);
 }
 
-.our-team .heading {
+.ourteam .heading{
     color: var(--black);
-    font-size: 1.3rem;
-    font-weight: 100;
     margin-left: 4rem;
+    margin-right: 4rem;
     margin-top: 10rem;
-    line-height: 1;
+}
+
+.ourteam p{
+    margin-bottom: 0.4rem;
     opacity: 0.7;
 }
 
-.our-team h2{
-    font-size: 2.4rem;
-    margin-left: 4rem;
-    margin-top: 0.5rem;
+.ourteam .heading h3{
+    padding-bottom: 0.3rem;
+    border-bottom: 0.1rem solid var(--black);
 }
 
 .boxes{
@@ -369,11 +370,10 @@ body {
     display: flex;
     margin-left: 2rem;
     margin-right: 2rem;
-    background-color: #153168;
 }
 
 .boxes .box {
-    margin: 2rem 1rem;
+    margin: 2rem 0;
     position: relative;
     background: url(gambar/Bj\ habibie.jpeg);
     background-size: cover;
@@ -383,8 +383,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    border-radius: 3rem;
-    padding: 2.2rem 2rem;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
 }
 
 .boxes .box::after {
@@ -396,15 +396,14 @@ body {
     bottom: 0;
     left: 0;
     background: linear-gradient(0deg, rgba(0,0,2,1)4%, rgba(255,255,255, 0)100%);
-    border-radius: 3rem;
+    border-radius: 2rem;
 }
 
 .box h3{
     color: var(--primary);
     font-size: 1.4rem;
     z-index: 1;
-    width: 15rem;
-    background-color: #153168;
+    width: 15rem;;
 }
 
 .box p{
@@ -416,9 +415,24 @@ body {
 
 
 
+
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 
+
+
+@media (max-width:1036px) {
+    .boxes{
+        justify-content: start;
+        overflow-x: scroll;
+    }
+    .boxes .box{
+        margin: 2rem 1rem;
+    }
+    .boxes::-webkit-scrollbar{
+        display: none;
+    }
+}
 
 @media (max-width:992px) {
     html {
@@ -498,10 +512,10 @@ body {
         display: block;
     }
     #btn-ngl {
-        position: static; /* Mengembalikan posisi tombol ke posisi normal dalam alur dokumen */
+        position: static;
         width: auto; 
-        padding: 5px 10px; /* Menyesuaikan padding agar sesuai dengan tampilan responsif */
-        border-radius: 0; /* Menghapus border-radius */
+        padding: 5px 10px;
+        border-radius: 0;
     }
     #btn-ngl:hover {
         background-color: var(--huruf);
@@ -578,14 +592,4 @@ body {
     .developer .go-to .cta{
         font-size: 1.5rem;
     }
-    .boxes{
-        overflow-x: scroll;
-    }
-    .boxes::-webkit-scrollbar{
-        display: none;
-    }
-    .boxes .box {
-        transform: translateX(120px);
-    }
-
 }
