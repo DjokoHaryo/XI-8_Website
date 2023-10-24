@@ -1,9 +1,17 @@
-:root {
+/* :root {
     --primary: #000;
     --huruf: #865DFF;
     --janda: #451165;
     --white: #fff;
     --tambahan: #081b29;
+} */
+
+:root {
+    --primary: #EBEBEB;
+    --biru: #808EAA;
+    --huruf: #153168;
+    --black: #141414;
+    --tambahan: #0c1524;
 }
 
 
@@ -29,7 +37,6 @@ body {
 .nav-container {
     width: 100%;
     height: 25px;
-    background: #865;
     display: flex;
     position: fixed;
     z-index: 9999;
@@ -39,7 +46,7 @@ body {
     width: 100%;
     height: 100%;
     padding: 1.4rem;
-    background: #152733;
+    background: var(--black);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -67,7 +74,7 @@ body {
 .navbar ul li a {
     position: relative;
     display: block;
-    color: white;
+    color: var(--primary);
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
@@ -78,10 +85,10 @@ body {
 }
 .navbar ul li a.active,
 .navbar ul>li>a:hover {
-    color: #0093FF;
+    color: var(--huruf);
 }
 #btn-ngl {
-    background-color: var(--janda);
+    background-color: var(--huruf);
     width: 60px;
     display: flex;
     justify-content: center;
@@ -93,8 +100,8 @@ body {
 }
 
 #btn-ngl:hover {
-    color: #451165;
-    background-color: #fff;
+    color: var(--huruf);
+    background-color: var(--primary);
 }
 .ser-btn ul {
     display: flex;
@@ -120,10 +127,10 @@ body {
 @media (min-width:992px) {
     .navbar ul li ul {
         position: absolute;
-        border-top: 3px solid #0093ff;
+        border-top: 3px solid var(--huruf);
         list-style: none;
         min-width: 250px;
-        background: #152733;
+        background: var(--tambahan);
         padding: 0;
         box-shadow: 0 3px 5px 0 rgb(0 0 0 / 20%);
         border-radius: 0;
@@ -143,17 +150,17 @@ body {
     }
     .navbar ul ul li a {
         display: block;
-        color: white;
+        color: var(--primary);
         font-weight: 700;
         font-size: 15px;
         padding: 8px 10px;
         line-height: 1.8rem;
-        border: 1px solid #ddd;
+        border: 1px solid var(--primary);
         transition: all 0.5s;
     }
     .navbar ul ul li a:hover {
-        color: white;
-        background-color: #0d6efd;
+        color: var(--huruf);
+        background-color: var(--black);
         border-color: transparent;
         padding-left: 25px;
     }
@@ -170,6 +177,8 @@ body {
         padding: 22px 16px;
     }
 }
+
+
 
 /* home  fill */
 
@@ -210,7 +219,7 @@ body {
     font-size: 1rem;
     margin: 1rem 0;
     font-weight: 400;
-    color: var(--white);
+    color: var(--primary);
 }
 .opening-button {
     margin: 2rem 0;
@@ -226,11 +235,11 @@ body {
 }
 .opening-button .button1:hover {
     background-color: #451165;
-    color: var(--white);
+    color: var(--primary);
     transition: 0.3s;
 }
 .opening-button .button2 {
-    color: var(--janda);
+    color: var(--primary);
     padding: .5rem .5rem;
     border: 2px solid var(--white);
     border-radius: 1rem;
@@ -289,7 +298,7 @@ body {
     color: var(--huruf);
     font-size: 2.4rem;
     padding-bottom: 10px;
-    border-bottom: 0.1rem solid var(--white);
+    border-bottom: 0.1rem solid var(--black);
 }
 .our-prof {
     padding: 0 7%;
@@ -304,6 +313,7 @@ body {
     background: url(gambar/09b137d0-942d-4b61-bc8a-3bbbea2a32fd.jpeg);
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 .image::after {
     content:'';
@@ -362,7 +372,7 @@ footer {
 }
 
 footer .lokasinya {
-    color: var(--white);
+    color: var(--primary);
     text-align: left;
     margin: 1rem auto;
     width: 23rem;
@@ -374,11 +384,11 @@ footer .loc-logo  {
 
 footer .loc-logo a {
     margin-right: 5px;
-    color: var(--white);
+    color: var(--primary);
 }
 
 footer .lokasinya .loc-logo h3 {
-    border-bottom: 2px solid var(--white);
+    border-bottom: 2px solid var(--primary);
     margin-bottom: 10px;
 }
 
@@ -425,11 +435,11 @@ footer .credit {
 }
 
 footer .credit p {
-    color: var(--white);
+    color: var(--primary);
 }
 
 footer .credit a {
-    color: var(--white);
+    color: var(--primary);
     font-weight: 700;
 }
 
@@ -447,88 +457,88 @@ footer .credit a {
 
 /* tablet */
 @media screen and (max-width:922px){
-        .navbar>ul {
-            position: absolute;
-            background-color: #152733;
-            left: 0;
-            right: 0;
-            top: 60px;
-            width: 90%;
-            display: inline-block;
-            margin: auto;
-            flex-direction: column;
-            border-top: 8px solid #0d6efd;
-        }
-        .navbar-logo  {
-            width: 20rem;
-        }
-        .header {
-            height: 60px;
-        }
-        .ser-btn #bar-icon {
-            display: block;
-        }
-        .ser-btn #bar-icon a {
-            color: white;
-            font-size: 27px;
-            padding: 1px 5px;
-        }
-        .navbar ul li {
-            border-top: 1px solid #e6e6e6;
-        }
-        .navbar ul li a {
-            padding: 15px 16px;
-        }
-        .navbar ul li>ul {
-            background-color: #2b5570;
-        }
-        .navbar ul li>ul li a {
-            font-size: 13px;
-            padding: 10px 25px;
-        }
-    
-        .navbar ul ul li a .arrow-right {
-            font-size: 18px;
-            transform: rotate(90deg);
-        }
-    
-        .navbar ul li a .down-arrow {
-            right: 10px;
-            top: 9px;
-            font-size: 35px;
-        }
-        .navbar ul li ul li>ul {
-            background-color: #0162CA;
-        }
-    
-        #menu {
-            max-height: 0;
-            visibility: hidden;
-            opacity: 0;
-            transition: all 0.5s;
-        }
-        #menu.show {
-            overflow-y: scroll;
-            visibility: visible;
-            opacity: 1;
-            max-height: 100vh;
-        }
-    
-        .submenu {
-            display: none;
-        }
-        .submenushow {
-            display: block;
-        }
-        #btn-ngl {
-            position: static; /* Mengembalikan posisi tombol ke posisi normal dalam alur dokumen */
-            width: auto; 
-            padding: 5px 10px; /* Menyesuaikan padding agar sesuai dengan tampilan responsif */
-            border-radius: 0; /* Menghapus border-radius */
-        }
-        #btn-ngl:hover {
-            background-color: var(--huruf);
-        }
+    .navbar>ul {
+        position: absolute;
+        background-color: var(--black);
+        left: 0;
+        right: 0;
+        top: 60px;
+        width: 90%;
+        display: inline-block;
+        margin: auto;
+        flex-direction: column;
+        border-top: 8px solid var(--huruf);
+    }
+    .navbar-logo  {
+        width: 20rem;
+    }
+    .header {
+        height: 60px;
+    }
+    .ser-btn #bar-icon {
+        display: block;
+    }
+    .ser-btn #bar-icon a {
+        color: var(--primary);
+        font-size: 27px;
+        padding: 1px 5px;
+    }
+    .navbar ul li {
+        border-top: 1px solid var(--primary);
+    }
+    .navbar ul li a {
+        padding: 15px 16px;
+    }
+    .navbar ul li>ul {
+        background-color: var(--black);
+    }
+    .navbar ul li>ul li a {
+        font-size: 13px;
+        padding: 10px 25px;
+    }
+
+    .navbar ul ul li a .arrow-right {
+        font-size: 18px;
+        transform: rotate(90deg);
+    }
+
+    .navbar ul li a .down-arrow {
+        right: 10px;
+        top: 9px;
+        font-size: 35px;
+    }
+    .navbar ul li ul li>ul {
+        background-color: var(--huruf);
+    }
+
+    #menu {
+        max-height: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    #menu.show {
+        overflow-y: scroll;
+        visibility: visible;
+        opacity: 1;
+        max-height: 100vh;
+    }
+
+    .submenu {
+        display: none;
+    }
+    .submenushow {
+        display: block;
+    }
+    #btn-ngl {
+        position: static; /* Mengembalikan posisi tombol ke posisi normal dalam alur dokumen */
+        width: auto; 
+        padding: 5px 10px; /* Menyesuaikan padding agar sesuai dengan tampilan responsif */
+        border-radius: 0; /* Menghapus border-radius */
+    }
+    #btn-ngl:hover {
+        background-color: var(--huruf);
+    }
         html {
             font-size: 75%;
         }
