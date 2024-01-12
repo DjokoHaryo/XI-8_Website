@@ -465,4 +465,7 @@ footer .credit a {
     .box {
         margin: 2rem auto;
     }
+    .navbar-logo {
+        width: 16rem;
+    }
 }

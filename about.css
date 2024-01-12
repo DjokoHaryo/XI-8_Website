@@ -14,7 +14,7 @@
 body { 
     color: var(--black);
     background-color: var(--primary);
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -415,10 +415,7 @@ body {
 
 
 
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-
-
+/* footer */
 footer {
     background-color: #0e0e0e;
     text-align: center;
@@ -499,6 +496,8 @@ footer .credit a {
     color: var(--primary);
     font-weight: 700;
 }
+
+
 
 
 
