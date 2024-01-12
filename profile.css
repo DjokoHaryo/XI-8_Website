@@ -269,6 +269,92 @@ body {
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+footer {
+    background-color: #0e0e0e;
+    text-align: center;
+    align-items: center;
+    margin-top: 3rem;
+    display: flex;
+    height: auto;
+}
+
+footer .lokasinya {
+    color: var(--primary);
+    text-align: left;
+    margin: 1rem auto;
+    width: 23rem;
+}
+
+footer .loc-logo  {
+    display: flex;
+}
+
+footer .loc-logo a {
+    margin-right: 5px;
+    color: var(--primary);
+}
+
+footer .lokasinya .loc-logo h3 {
+    border-bottom: 2px solid var(--primary);
+    margin-bottom: 10px;
+}
+
+
+
+footer .logo-footer {
+    width: 20%;
+}
+
+footer .logo-footer img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+footer .writenya {
+    margin: 0 auto;
+}
+
+footer .socials {
+    padding: 1rem 0; 
+}
+
+footer .socials a {
+    color: #fff;
+    margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+    color: var(--huruf)
+}
+
+footer .links {
+    margin-bottom: 1.4rem
+}
+
+footer .links a {
+    color: #fff;
+    padding: 0.7rem 1rem;
+}
+
+footer .credit {
+    font-size: 0.8rem;
+}
+
+footer .credit p {
+    color: var(--primary);
+}
+
+footer .credit a {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
 @media (max-width:992px) {
     html {
         font-size: 75%;
