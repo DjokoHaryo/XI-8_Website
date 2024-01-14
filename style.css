@@ -225,7 +225,7 @@ body {
     margin: 2rem 0;
 }
 .opening-button .button1 {
-    color: #451165;
+    color: var(--huruf);
     border: 2px solid var(--janda);
     border-radius: 1rem;
     margin: 0 1rem 0 0;
@@ -234,22 +234,22 @@ body {
     font-weight: 700;
 }
 .opening-button .button1:hover {
-    background-color: #451165;
+    background-color: var(--black);
     color: var(--primary);
     transition: 0.3s;
 }
 .opening-button .button2 {
     color: var(--primary);
     padding: .5rem .5rem;
-    border: 2px solid var(--white);
+    border: 2px solid var(--huruf);
     border-radius: 1rem;
-    background-color: var(--white);
+    background-color: var(--huruf);
 }
 .opening-button .button2:hover {
-    background-color: #451165;
-    color: var(--white);
+    background-color: var(--black);
+    color: var(--primary);
     transition: 0.3s;
-    border: 2px solid var(--janda);
+    border: 2px solid var(--black);
 }
 
 /* class greeting */
@@ -307,7 +307,7 @@ body {
     justify-content: space-around;
 }
 .profile-card {
-    border-radius: 40px;
+    border-radius: 24px;
     width: 328px;
     height: 480px;
     background: url(gambar/09b137d0-942d-4b61-bc8a-3bbbea2a32fd.jpeg);
