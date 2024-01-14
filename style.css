@@ -536,9 +536,6 @@ footer .credit a {
         padding: 5px 10px; /* Menyesuaikan padding agar sesuai dengan tampilan responsif */
         border-radius: 0; /* Menghapus border-radius */
     }
-    #btn-ngl:hover {
-        background-color: var(--huruf);
-    }
         html {
             font-size: 75%;
         }
